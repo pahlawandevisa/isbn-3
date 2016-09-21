@@ -1,4 +1,4 @@
-#This package use to check an ISBN string is valid or not
+#This package uses to check an ISBN string is valid or not
 
 git clone https://github.com/quocbaost1890/isbn.git
 
