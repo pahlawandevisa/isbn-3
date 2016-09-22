@@ -39,7 +39,7 @@ var isValidIsbn = function isValidIsbn(strIsbn, callback) {
     if (check === 10) {
       check = 'X';
     }
-    result = check === str[str.length - 1].toUpperCase();
+    result = check.toString() === str[str.length - 1].toUpperCase();
   }
 
   callback(null, result);
