@@ -1,11 +1,38 @@
-#This package uses to check an ISBN string is valid or not
+#Check valid ISBN number package
 
 [![Build Status](https://travis-ci.org/quocbaost1890/isbn.svg?branch=master)](https://travis-ci.org/quocbaost1890/isbn)
-[![License](https://img.shields.io/github/license/quocbaost1890/isbn.svg)](https://github.com/quocbaost1890/isbn/blob/master/LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/quocbaost1890/isbn/badge.svg)](https://coveralls.io/github/quocbaost1890/isbn)
+[![Stable Version](https://img.shields.io/npm/v/g-isbn.svg)](https://www.npmjs.com/package/g-isbn)
+[![Download Status](https://img.shields.io/npm/dt/g-isbn.svg)](https://www.npmjs.com/package/g-isbn)
+[![License](https://img.shields.io/github/license/quocbaost1890/isbn.svg)](https://github.com/quocbaost1890/isbn/blob/master/LICENSE)
 
-git clone https://github.com/quocbaost1890/isbn.git
+A small package to check valid ISBN number
 
-run `npm install` to install package
+## Installation
 
-run `npm test` to test
+  npm install --save g-isbn
+  
+## Usage
+
+  let isbn = require('g-isbn');
+
+  isbn.isValidIsbn('9780061122415', (err, s) => {
+    console.log(s);
+  });
+  
+## Test
+
+  npm test
+  
+## Contributing
+
+  BaoNQ
+  
+## Release History
+
+* 1.0.0 Initial release
+
+## License
+
+  MIT
+
