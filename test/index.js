@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var isbn = require('../src/index.js');
+let expect = require('chai').expect;
+let isbn = require('../src/index.js');
 
 describe('ISBN: ', () => {
   describe('isValidIsbn: ', () => {
@@ -47,6 +47,14 @@ describe('ISBN: ', () => {
       isbn.isValidIsbn('184146208X', (err, s) => {
         expect(err).to.equal(null);
         expect(s).to.equal(true);
+        done();
+      });
+    });
+
+    it('return error when input is not a string', (done) => {
+      isbn.isValidIsbn(1313443454353, (err, s) => {
+        expect(err).to.equal('error');
+        expect(s).to.equal('Input is not a string');
         done();
       });
     });
