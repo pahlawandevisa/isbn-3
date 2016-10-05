@@ -1,19 +1,20 @@
-var isValidIsbn = function isValidIsbn(strIsbn, callback) {
+let isValidIsbn = (strIsbn, callback) => {
 
-  var check,
+  let check,
     digit,
     i,
     result,
     sum,
     weight;
 
-  var str = strIsbn.replace(/[^0-9X]/gi, '');
-
-  if (str.length !== 10 && str.length !== 13) {
-    result = false;
+  if (typeof strIsbn !== 'string' && !(strIsbn instanceof String)) {
+    return callback('error', 'Input is not a string');
   }
 
-  if (str.length === 13) {
+  let str = strIsbn.replace(/[^0-9X]/gi, '');
+  let length = str.length;
+
+  if (length === 13) {
     sum = 0;
     for (i = 0; i < 12; i++) {
       digit = parseInt(str[i], 10);
@@ -24,10 +25,8 @@ var isValidIsbn = function isValidIsbn(strIsbn, callback) {
       }
     }
     check = (10 - sum % 10) % 10;
-    result = check === parseInt(str[str.length - 1], 10);
-  }
-
-  if (str.length === 10) {
+    result = check === parseInt(str[length - 1], 10);
+  } else if (length === 10) {
     weight = 10;
     sum = 0;
     for (i = 0; i < 9; i++) {
@@ -36,13 +35,18 @@ var isValidIsbn = function isValidIsbn(strIsbn, callback) {
       weight--;
     }
     check = 11 - sum % 11;
+    let checkStr;
     if (check === 10) {
-      check = 'X';
+      checkStr = 'X';
+    } else {
+      checkStr = check.toString();
     }
-    result = check.toString() === str[str.length - 1].toUpperCase();
+    result = checkStr === str[length - 1].toUpperCase();
+  } else {
+    result = false;
   }
 
-  callback(null, result);
+  return callback(null, result);
 };
 
 module.exports = {
