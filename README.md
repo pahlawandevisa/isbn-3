@@ -8,31 +8,36 @@
 
 A small package to check valid ISBN number
 
+## Requirement
+
+* Node 6
+
 ## Installation
 
-  npm install --save g-isbn
-  
+`npm install --save g-isbn`
+
 ## Usage
+```javascript
+let isbn = require('g-isbn');
 
-  let isbn = require('g-isbn');
+isbn.isValidIsbn('9780061122415', (err, s) => {
+  console.log(s);
+});
+```
 
-  isbn.isValidIsbn('9780061122415', (err, s) => {
-    console.log(s);
-  });
-  
 ## Test
 
-  npm test
-  
+`npm test`
+
 ## Contributing
 
-  BaoNQ
-  
+BaoNQ
+
 ## Release History
 
 * 1.0.0 Initial release
+* 1.0.3 Update README
 
 ## License
 
-  MIT
-
+MIT
