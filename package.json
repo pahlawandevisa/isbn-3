@@ -1,6 +1,6 @@
 {
   "name": "g-isbn",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This package contains a function to check an ISBN is valid or not",
   "main": "src/index.js",
   "scripts": {
@@ -8,8 +8,8 @@
     "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --recursive --timeout 5000"
   },
   "repository": {
-   "type": "git",
-   "url": "https://github.com/quocbaost1890/isbn.git"
+    "type": "git",
+    "url": "https://github.com/quocbaost1890/isbn.git"
   },
   "author": "BaoNQ",
   "license": "MIT",
