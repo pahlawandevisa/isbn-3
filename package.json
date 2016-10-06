@@ -1,7 +1,7 @@
 {
   "name": "g-isbn",
   "version": "1.0.3",
-  "description": "This package contains a function to check an ISBN is valid or not",
+  "description": "This package contains a function to check an ISBN string is valid or not",
   "main": "src/index.js",
   "scripts": {
     "pretest": "eslint src",
